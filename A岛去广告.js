@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
+// @author       93xo.ox39@gmail.com
 // @include        *://adnmb*.*/*
 // @grant        none
 // ==/UserScript==
