@@ -2,9 +2,9 @@
 // @name         A岛去广告
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
+// @description  A岛去广告
 // @author       93xo.ox39@gmail.com
-// @include        *://adnmb*.*/*
+// @include      *://adnmb*.*/*
 // @grant        none
 // ==/UserScript==
 
