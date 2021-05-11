@@ -3,7 +3,7 @@
 // @include      *://download.bbcd.tw/*
 // @include      *://download.downsx.org/*
 // @version      0.1
-// @description  try to take over the world!
+// @description  2048 详情页直达
 // @author       93xo.ox39@gmail.com
 // @grant        none
 // ==/UserScript==
