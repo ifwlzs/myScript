@@ -2,7 +2,7 @@
 // @name         Legado 书
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @author       ifwlzs
+// @author       93xo.ox39@gmail.com
 // @description  web看书快变色！
 // @include        *://*.*.*:1122/new/index.html
 // @include        *://*:1122/new/index.html
@@ -14,6 +14,8 @@
     'use strict';
 
     function toChangeLegadoColor(){
+
+        document.title=sessionStorage.getItem('bookName');
         document.getElementsByClassName("chapter")[0].style.color="#39cccc";
         document.getElementsByClassName("chapter")[0].style.border="1px solid #034e51";
         document.getElementsByClassName("el-popover")[0].style.color="#66ccff"
@@ -22,11 +24,14 @@
                 document.getElementsByClassName("icon-text")[i].style.color="#39cccc"
             }
             document.getElementsByClassName("tool-icon")[i].style.color="#39cccc"
-            document.getElementsByClassName("tool-icon")[i].style.border="1px solid #034e51";
+            document.getElementsByClassName("tool-icon")[i].style.border="1px solid #034e51"
         }
+
     }
     $(document).ready(function () {
         toChangeLegadoColor()
     })
     // Your code here...
+
+
 })();
