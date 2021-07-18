@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Legado 书
+// @name         阅读web给爷变色
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @author       93xo.ox39@gmail.com
+// @author       ifwlzs
 // @description  web看书快变色！
-// @include        *://*.*.*:1122/new/index.html
-// @include        *://*:1122/new/index.html
+// @include        *://*.*.*:1122/bookshelf/index.html
+// @include        *://*:1122/bookshelf/index.html
 // @require      https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js
 // @grant        none
 // ==/UserScript==
@@ -26,7 +26,6 @@
             document.getElementsByClassName("tool-icon")[i].style.color="#39cccc"
             document.getElementsByClassName("tool-icon")[i].style.border="1px solid #034e51"
         }
-
     }
     $(document).ready(function () {
         toChangeLegadoColor()
