@@ -8,6 +8,7 @@
 // @author       ifwlzs
 // @grant        none
 // @run-at       document-end
+// @icon         https://q1.0e8c2c0f.pw/favicon.ico
 // ==/UserScript==
 
 (function() {
