@@ -5,7 +5,7 @@
 // @description  御宅同萌,终点论坛签到
 // @author       ifwlzs
 // @include      *://*.*.*/k_misign-sign.html
-// @icon         https://bbs.zdfx.net/favicon.ico
+// @icon         https://avatars.githubusercontent.com/u/49548316
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
@@ -13,5 +13,6 @@
 (function() {
     'use strict';
     document.querySelector("#JD_sign").click()
+   
     // Your code here...
 })();
