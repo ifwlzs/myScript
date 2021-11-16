@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         2048磁链直达
 // @include      *://*.*.*/2048/*
-// @version      0.1
+// @version      0.2
 // @description  2048磁链直达
 // @author       ifwlzs
 // @grant        none
 // @run-at       document-end
+// @icon         https://b.lpq0.site/2048/favicon.ico
 // ==/UserScript==
 
 (function() {
