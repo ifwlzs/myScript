@@ -9,6 +9,7 @@
 // @author       ifwlzs
 // @grant        none
 // @run-at       document-end
+// @icon         https://b.lpq0.site/2048/favicon.ico
 // ==/UserScript==
 
 (function() {
