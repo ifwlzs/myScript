@@ -6,6 +6,7 @@
 // @author       ifwlzs
 // @grant        none
 // @run-at       document-end
+// @icon         https://sehuatang.org/favicon.ico
 // ==/UserScript==
 
 (function() {
