@@ -6,6 +6,7 @@
 // @author       ifwlzs
 // @include      *://adnmb*.*/*
 // @require      https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js
+// @icon         https://adnmb3.com/Public/img/ac-bitmap.png
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
