@@ -13,6 +13,5 @@
 (function() {
     'use strict';
     document.querySelector("#JD_sign").click()
-    // @run-at       document-end
     // Your code here...
 })();
