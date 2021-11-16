@@ -2,15 +2,21 @@
 // @name         2048 详情页直达
 // @include      *://download.bbcd.tw/*
 // @include      *://download.downsx.org/*
-// @version      0.1
+// @include      *://*.hjddown.com/*
+// @require      https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js
+// @version      0.2
 // @description  2048 详情页直达
-// @author       93xo.ox39@gmail.com
+// @author       ifwlzs
 // @grant        none
+// @run-at       document-end
 // ==/UserScript==
 
 (function() {
 
     'use strict';
-document.querySelector('.dlboxbg').innerHTML="<a href=\'"+document.querySelector(".uk-button").href+" \'>"+document.querySelector(".uk-button").href+"</a>"
+     $(document).ready(function () {
+         var url=document.querySelector(".uk-button").href;
+        document.querySelector('.dlboxbg').innerHTML="<a href=\'"+url+" \'>"+url +"</a>"
+    })
     // Your code here...
 })();
