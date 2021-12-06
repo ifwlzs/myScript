@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YTB自动宽屏
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  YTB自动宽屏
 // @author       ifwlzs
 // @include      https://www.youtube.com/*
@@ -12,6 +12,7 @@
 
 (function() {
     'use strict';
-    document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-right-controls > button.ytp-size-button.ytp-button").click()
+    var button=document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-right-controls > button.ytp-size-button.ytp-button")
+    button.click()
     // Your code here...
 })();
