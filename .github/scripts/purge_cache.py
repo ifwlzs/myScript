@@ -15,6 +15,7 @@ if __name__ == '__main__':
     work_space = os.environ.get('GITHUB_WORKSPACE')
     file_list = get_file_list(work_space)
     for file in file_list:
-        url = f'https://purge.jsdelivr.net/gh/oli-fa/YueDuBackup/{file}'
+        url = f'https://purge.jsdelivr.net/gh/ifwlzs/tampermonkeyScript/{file}'
         print(url)
         print(requests.get(url).text)
+        
