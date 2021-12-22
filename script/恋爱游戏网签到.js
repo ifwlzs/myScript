@@ -8,6 +8,7 @@
 // @icon         https://www.lianaiyx.com/favicon.ico
 // @grant        none
 // @run-at       document-end
+// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/tampermonkeyScript@main/script/%E6%81%8B%E7%88%B1%E6%B8%B8%E6%88%8F%E7%BD%91%E7%AD%BE%E5%88%B0.js
 // ==/UserScript==
 
 (function() {
