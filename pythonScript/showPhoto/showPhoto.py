@@ -17,7 +17,7 @@ def all_files_path(rootDir):
     for root, dirs, files in os.walk(rootDir):     # 分别代表根目录、文件夹、文件
         # files.sort()
         files.sort(key=sort_key)
-        print(files)
+        # print(files)
         for file in files:                         # 遍历文件
             file_path = os.path.join(os.path.relpath(root), file)   # 获取文件绝对路径  
             filepaths.append(file_path)            # 将文件路径添加进列表
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     <meta name="description" content="自动生成，访问当前目录下图片" />
     <meta name="robots" content="none" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>"""+os.getcwd().split("\\")[-1]+"""</title>
     <style>
         img {
             max-width: 100%;
@@ -51,8 +51,7 @@ if __name__ == "__main__":
 </head>  
 <body>
 """
-    
-    print(filepaths)
+    print("文件列表：",filepaths)
     with open('index.html', 'w',encoding='utf-8') as f:
         for filepath in filepaths:
             if(filepath.lower().endswith(('.bmp', '.dib', '.png', '.jpg', '.jpeg', '.pbm', '.pgm', '.ppm', '.tif', '.tiff', '.gif'))):
