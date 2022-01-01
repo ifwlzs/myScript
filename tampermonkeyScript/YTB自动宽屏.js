@@ -8,7 +8,7 @@
 // @icon         https://www.google.com/s2/favicons?domain=youtube.com
 // @grant        none
 // @run-at      document-end
-// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/tampermonkeyScript@main/script/YTB%E8%87%AA%E5%8A%A8%E5%AE%BD%E5%B1%8F.js
+// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/YTB%E8%87%AA%E5%8A%A8%E5%AE%BD%E5%B1%8F.js
 // ==/UserScript==
 
 (function() {

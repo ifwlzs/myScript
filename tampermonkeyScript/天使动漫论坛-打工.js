@@ -8,7 +8,7 @@
 // @icon         https://www.google.com/s2/favicons?domain=tsdm39.net
 // @grant        none
 // @run-at       document-end
-// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/tampermonkeyScript@main/script/%E5%A4%A9%E4%BD%BF%E5%8A%A8%E6%BC%AB%E8%AE%BA%E5%9D%9B-%E6%89%93%E5%B7%A5.js
+// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/%E5%A4%A9%E4%BD%BF%E5%8A%A8%E6%BC%AB%E8%AE%BA%E5%9D%9B-%E6%89%93%E5%B7%A5.js
 // ==/UserScript==
 
 (function() {

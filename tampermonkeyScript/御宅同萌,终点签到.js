@@ -8,7 +8,7 @@
 // @icon         https://avatars.githubusercontent.com/u/49548316
 // @grant        none
 // @run-at       document-end
-// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/tampermonkeyScript@main/script/%E5%BE%A1%E5%AE%85%E5%90%8C%E8%90%8C%2C%E7%BB%88%E7%82%B9%E7%AD%BE%E5%88%B0.js
+// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/%E5%BE%A1%E5%AE%85%E5%90%8C%E8%90%8C%2C%E7%BB%88%E7%82%B9%E7%AD%BE%E5%88%B0.js
 // ==/UserScript==
 
 (function() {

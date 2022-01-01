@@ -9,7 +9,7 @@
 // @require      https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js
 // @icon         https://github.com/gedoor/legado/raw/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
 // @grant        none
-// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/tampermonkeyScript@main/script/%E9%98%85%E8%AF%BBweb%E7%BB%99%E7%88%B7%E5%8F%98%E8%89%B2.js
+// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/%E9%98%85%E8%AF%BBweb%E7%BB%99%E7%88%B7%E5%8F%98%E8%89%B2.js
 // ==/UserScript==
 
 (function() {
