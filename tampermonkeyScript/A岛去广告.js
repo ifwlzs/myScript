@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         A岛去广告
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  A岛去广告
 // @author       ifwlzs
 // @include      *://adnmb*.*/*
 // @require      https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js
 // @icon         https://adnmb3.com/Public/img/ac-bitmap.png
 // @grant        none
-// @run-at       document-end
+// @run-at       context-menu
 // @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/A%E5%B2%9B%E5%8E%BB%E5%B9%BF%E5%91%8A.js
 // ==/UserScript==
 
