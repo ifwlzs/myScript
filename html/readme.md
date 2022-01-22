@@ -9,3 +9,7 @@ https://github.com/oli-fa/YueDuBackup/blob/master/Tool/tool.html
 # 阅读app发现列表美化
 
 https://github.com/oli-fa/YueDuBackup/blob/master/Tool/tool1.html
+
+# 阅读app一键自动导入源
+
+https://github.com/oli-fa/YueDuBackup/blob/master/Tool/import.html
