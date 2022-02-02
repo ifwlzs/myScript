@@ -40,11 +40,12 @@ if __name__ == "__main__":
     <meta name="author" content="93xo.ox39@gmail.com" />
     <meta name="description" content="自动生成，访问当前目录下图片" />
     <meta name="robots" content="none" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+
     <title>"""+os.getcwd().split("\\")[-1]+"""</title>
     <style>
         img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
         }
     </style>
