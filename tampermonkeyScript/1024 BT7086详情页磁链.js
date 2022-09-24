@@ -1,10 +1,7 @@
 // ==UserScript==
 // @name         1024 BT7086详情页磁链
-// @include      *://*.downsx.*/*
-// @include      *://*/torrent/*
-// @include      *://bitsdts.*/*
-// @include      *://*/pw/*
-// @version      0.4
+// @include      *
+// @version      0.5
 // @description  1024 BT7086详情页磁链
 // @author       ifwlzs
 // @grant        none
@@ -15,7 +12,10 @@
 
 (function() {
     'use strict';
-    var url=document.querySelectorAll(".uk-button")[1].href
+    var url=document.querySelectorAll(".uk-button")[0].href
+    if(url.search("magnet:\\?xt=urn:btih:")<0){
+        url=document.querySelectorAll(".uk-button")[1].href
+    }
 	url=url.replace(" ","")
     document.querySelector('.dlboxbg').innerHTML="<a href=\'"+url+" \'>"+url+"</a>"
     // Your code here...
