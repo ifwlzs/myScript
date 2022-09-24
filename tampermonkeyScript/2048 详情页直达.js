@@ -3,8 +3,9 @@
 // @include      *://download.bbcd.tw/*
 // @include      *://download.downsx.org/*
 // @include      *://*.hjddown.com/*
+// @include      *://*/2048/*
 // @require      https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js
-// @version      0.2
+// @version      0.3
 // @description  2048 详情页直达
 // @author       ifwlzs
 // @grant        none

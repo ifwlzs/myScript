@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         2048磁链直达
-// @include      *://*.*.*/2048/*
-// @version      0.3
+// @include      *://*/2048/*
+// @version      0.4
 // @description  2048磁链直达
 // @author       ifwlzs
 // @grant        none
