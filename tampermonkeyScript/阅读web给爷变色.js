@@ -6,6 +6,7 @@
 // @description  web看书快变色！
 // @include      *://*.*.*:1122/bookshelf/*
 // @include      *://*:1122/bookshelf/*
+// @include      */bookshelf/*
 // @require      https://fastly.staticfile.org/jquery/3.4.1/jquery.min.js
 // @icon         https://github.com/gedoor/legado/raw/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
 // @grant        none
