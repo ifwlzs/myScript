@@ -7,7 +7,7 @@
 // @require https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js
 // @include http*://cl.*.*/*
 // @include http*://*.ty66.*/*
-// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/CL1024%E6%94%B9%E8%BF%9B%E7%89%88%EF%BC%88%E8%8F%8A%E6%94%B9%EF%BC%9A%E5%B7%B2%E9%80%82%E9%85%8D%E6%89%8B%E6%9C%BA%E7%89%88%EF%BC%89.js
+// @updateURL	 https://fastly.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/CL1024%E6%94%B9%E8%BF%9B%E7%89%88%EF%BC%88%E8%8F%8A%E6%94%B9%EF%BC%9A%E5%B7%B2%E9%80%82%E9%85%8D%E6%89%8B%E6%9C%BA%E7%89%88%EF%BC%89.js
 // 原作者信息
 // @author      rose1988c
 // @author      ifwlzs

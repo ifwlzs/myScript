@@ -8,7 +8,7 @@
 // @icon         https://www.sayhuahuo.com/favicon.ico
 // @grant        none
 // @run-at       document-end
-// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/%E8%8A%B1%E7%81%AB%E7%AD%BE%E5%88%B0.js
+// @updateURL	 https://fastly.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/%E8%8A%B1%E7%81%AB%E7%AD%BE%E5%88%B0.js
 // ==/UserScript==
 
 (function() {

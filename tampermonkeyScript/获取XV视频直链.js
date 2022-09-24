@@ -8,7 +8,7 @@
 // @include        *//*.xvideos.*/*
 // @icon         https://www.google.com/s2/favicons?domain=xvideos.com
 // @run-at          document-end
-// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/%E8%8E%B7%E5%8F%96XV%E8%A7%86%E9%A2%91%E7%9B%B4%E9%93%BE.js
+// @updateURL	 https://fastly.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/%E8%8E%B7%E5%8F%96XV%E8%A7%86%E9%A2%91%E7%9B%B4%E9%93%BE.js
 // ==/UserScript==
 
 (function() {

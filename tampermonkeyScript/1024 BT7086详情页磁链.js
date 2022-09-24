@@ -9,7 +9,7 @@
 // @author       ifwlzs
 // @grant        none
 // @run-at       document-end
-// @updateURL    https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/1024%20BT7086%E8%AF%A6%E6%83%85%E9%A1%B5%E7%A3%81%E9%93%BE.js
+// @updateURL    https://fastly.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/1024%20BT7086%E8%AF%A6%E6%83%85%E9%A1%B5%E7%A3%81%E9%93%BE.js
 // @icon         https://avatars.githubusercontent.com/u/49548316?s=40&v=4
 // ==/UserScript==
 

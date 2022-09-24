@@ -9,7 +9,7 @@
 // @icon         https://adnmb3.com/Public/img/ac-bitmap.png
 // @grant        none
 // @run-at       context-menu
-// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/A%E5%B2%9B%E5%8E%BB%E5%B9%BF%E5%91%8A.js
+// @updateURL	 https://fastly.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/A%E5%B2%9B%E5%8E%BB%E5%B9%BF%E5%91%8A.js
 // ==/UserScript==
 
 (function() {

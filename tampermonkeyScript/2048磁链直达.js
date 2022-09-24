@@ -7,7 +7,7 @@
 // @grant        none
 // @run-at       document-end
 // @icon         https://b.lpq0.site/2048/favicon.ico
-// @updateURL	 https://cdn.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/2048%20%E8%AF%A6%E6%83%85%E9%A1%B5%E7%9B%B4%E8%BE%BE.js
+// @updateURL	 https://fastly.jsdelivr.net/gh/ifwlzs/myScript@main/tampermonkeyScript/2048%20%E8%AF%A6%E6%83%85%E9%A1%B5%E7%9B%B4%E8%BE%BE.js
 // ==/UserScript==
 
 (function() {
