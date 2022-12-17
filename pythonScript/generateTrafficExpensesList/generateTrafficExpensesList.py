@@ -16,11 +16,11 @@ am = "8:00"
 pm = "19:00"
 # 上午起始站
 am_start_station = "丰潭路"
-# 上午午终点站
+# 上午终点站
 am_end_station = "聚才路"
 # 下午起始站(默认是上午的终点站)
 pm_start_station = am_end_station
-# 上午午终点站(默认是上午的起始站)
+# 上午终点站(默认是上午的起始站)
 pm_end_station = am_start_station
 # 工作内容
 job_content = "驻场开发"
