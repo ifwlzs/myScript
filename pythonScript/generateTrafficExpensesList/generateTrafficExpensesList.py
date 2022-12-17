@@ -1,5 +1,6 @@
 """
 生成交通费清单
+python pip install chinese_calendar -i https://pypi.tuna.tsinghua.edu.cn/simple/
 """
 
 import chinese_calendar
@@ -31,7 +32,7 @@ am_expenses = 5
 pm_expenses = am_expenses
 
 
-def getWorkDay():
+def getTrafficExpensesList():
     work_days = chinese_calendar.get_workdays(start_time, end_time)
     # 累计费用
     sum_expenses = 0
@@ -47,4 +48,4 @@ def getWorkDay():
 
 
 if __name__ == '__main__':
-    getWorkDay()
+    getTrafficExpensesList()
