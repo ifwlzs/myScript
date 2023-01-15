@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="IPPON大喜利大奖赛奖杯生成">
+		<meta name="keywords" content="IPPON">
+		<meta name="author" content="93xo.ox39@gmail.com">
+		<meta charset="utf-8">
+		<title>IPPON GRAND PRIX</title>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div class="trophy">
+			<div class="trophy_body">
+				<div class="trophy_top_left"></div>
+				<div class="trophy_top_right"></div>
+				<div class="trophy_slogan">
+					<span class="slogan_i">I </span>pp<span class="o">O</span>N GRAND PRIX<span class="day"
+						id="trophy_slogan_today"></span>
+				</div>
+				<div class="trophy_bottom_left"></div>
+				<div class="trophy_bottom_right"></div>
+			</div>
+		</div>
+
+		<div class="slogan">
+			<span class="slogan_i">I </span>PP<span class="o">O</span>N GRAND PRIX
+			<br>
+			<span id="slogan_today"></span>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var day = new Date();
+		day.setTime(day.getTime());
+		var today = day.getFullYear() + "." + (day.getMonth() + 1) + "." + day.getDate();
+		document.getElementById("trophy_slogan_today").innerText = today
+		document.getElementById("slogan_today").innerText = today
+	</script>
+</html>
