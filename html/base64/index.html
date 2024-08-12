@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	
+	
+	</head>
+	<body>
+		<script type="text/javascript">
+			//获取当前页面的参数url
+			function getUrl(){
+				let res= window.location.href;
+				  const URL = res.split('?')[1];
+				  let obj = {}; // 声明参数对象
+				  let arr = URL.split("&");
+				  for (let i = 0; i < arr.length; i++) {
+				    let arrNew = arr[i].split("="); 
+				    obj[arrNew[0]] = arrNew[1];
+				  }
+				return obj['url']
+			}
+			
+			//直接通过XMLHttpRequest对象获取远程网页源代码
+			function getSource(url) {
+				//根据window.XMLHttpRequest对象是否存在使用不同的创建方式
+				if (window.XMLHttpRequest) {
+				   xmlHttp = new XMLHttpRequest();                  //FireFox、Opera等浏览器支持的创建方式
+				} else {
+				   xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");//IE浏览器支持的创建方式
+				}
+			    createXmlHttp();                                            //创建XMLHttpRequest对象
+			    // xmlHttp.onreadystatechange = writeSource;                   //设置回调函数
+			    xmlHttp.open("GET", url, true);
+			    xmlHttp.send(null);
+			    encode=xmlHttp.responseText;
+				encode=encode.replace("\n","")
+				// encode=decode()//base64解密
+				document.body.innerHTML=encode
+			}
+			
+			
+			url=getUrl()
+			getSource(url)
+		</script>
+		
+	</body>
+</html>
