@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import feedparser
 import requests
 import json
 import time
 import os
+import re
 import html
 import base64
 import hashlib
@@ -14,10 +15,8 @@ from bs4 import BeautifulSoup as bs
 
 # 配置
 WEBHOOK_URL = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=你的key'  # 替换为你的Webhook Key
-# 存储文件
 DB_FILE = 'sent_items.db'
-# 发送间隔
-SLEEP_TIME_SECOND = 3 
+SLEEP_TIME_SECOND = 3  # 发送间隔
 
 
 def init_db():
@@ -28,7 +27,9 @@ def init_db():
                         id TEXT PRIMARY KEY,
                         title TEXT,
                         link TEXT,
-                        sent_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                        sent_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        save_time TEXT,
+                        update_time TEXT
                       )''')
     conn.commit()
     conn.close()
@@ -44,11 +45,11 @@ def is_article_sent(article_id):
     return result is not None
 
 
-def save_sent_article(article_id, title, link):
+def save_sent_article(article_id, title, link,update_time,save_time):
     """保存已发送的文章ID到数据库"""
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO sent_articles (id, title, link) VALUES (?, ?, ?)", (article_id, title, link))
+    cursor.execute("INSERT INTO sent_articles (id, title, link,update_time,save_time) VALUES (?, ?, ?, ?, ?)", (article_id, title, link,update_time,save_time))
     conn.commit()
     conn.close()
 
@@ -60,8 +61,14 @@ def decode_html_text(encoded_text):
 
 def fetch_image_data(img_url):
     """下载图片并返回其Base64编码和MD5值"""
+    headers = {}
+
+    # 使用正则表达式匹配 *.sinaimg.cn 域名
+    if re.search(r'^https?://(?:\w+\.)?sinaimg\.cn', img_url):
+        headers['Referer'] = 'https://weibo.com'
+
     try:
-        response = requests.get(img_url, timeout=10)  # 设置超时为10秒
+        response = requests.get(img_url, headers=headers, timeout=30)  # 设置超时为30秒
         if response.status_code == 200:
             img_base64 = base64.b64encode(response.content).decode('utf-8')
             img_md5 = hashlib.md5(response.content).hexdigest()
@@ -75,11 +82,24 @@ def fetch_image_data(img_url):
 
 
 def extract_plain_text(content_html):
+
     """将HTML内容转换为纯文本"""
+
     soup = bs(content_html, "html.parser")
+
+    # 处理 <br> 标签，替换为换行符
     for tag in soup.find_all(["img", "br"]):
         tag.replace_with("\n" if tag.name == "br" else "[图片]")
-    return soup.get_text().strip()
+
+    # 处理 <p> 标签，替换为换行符，并保留标签内的内容
+    for tag in soup.find_all("p"):
+        tag.insert_before("\n")  # 在 p 标签内容之前插入换行
+        tag.unwrap()  # 去掉 p 标签但保留其内容
+    text = soup.get_text().strip()
+    print(soup.text)
+    # # 使用正则替换多个连续换行符为一个换行符
+    text = re.sub(r'\n\n+', '\n\n', text)
+    return text
 
 
 def send_text_message(content):
@@ -134,20 +154,23 @@ def check_rss_feed(feed_url):
         if not is_article_sent(entry.id):
             content_html = entry.content[0].value
             text_content = extract_plain_text(content_html)
-            updatetime = datetime.fromisoformat(entry.updated).strftime('%Y-%m-%d %H:%M:%S')
-            content = f"{entry.title}\n\n{text_content}\n\n--------------\n来源：Rss {entry.source.title} [Powered by 小萝狸BOT] \n详情链接: {entry.link}\n更新时间：{updatetime}"
-
+            updatetime1 = datetime.fromisoformat(entry.updated)+timedelta(hours=8)
+            updatetime = updatetime1.strftime('%Y-%m-%d %H:%M:%S')
+            content = f"{entry.title}\n\n{text_content}\n\n--------------\n来源：Rss {entry.source.title} [Powered by 小萝狸BOT] \n详情链接: {entry.link}\n发布时间：{updatetime}"
+            
+            save_time = datetime.now()
+            save_time = save_time.strftime('%Y-%m-%d %H:%M:%S')
             # 提取图片链接
             soup = bs(content_html, "html.parser")
             img_urls = [img["src"] for img in soup.find_all("img")]
-
+            
             # 发送内容到企业微信
-            print(f"准备发送的内容：{content}")
-            print(f"图片链接：{img_urls}")
+            print(f"\n\n准备发送的内容：{content}")
+            print(f"图片链接：{img_urls}\n\n")
             send_rss_content_to_wechat(content, img_urls)
-
+            
             # 记录已发送的文章
-            save_sent_article(entry.id, entry.title, entry.link)
+            save_sent_article(entry.id, entry.title, entry.link,updatetime,save_time)
 
 
 def main():
