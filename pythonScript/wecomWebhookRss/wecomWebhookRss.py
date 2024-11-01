@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup as bs
 # 配置
 WEBHOOK_URL = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=你的key'  # 替换为你的Webhook Key
 DB_FILE = 'sent_items.db'
-SLEEP_TIME_SECOND = 3  # 发送间隔
+SLEEP_TIME_SECOND = 5  # 发送间隔
 
 
 def init_db():
@@ -127,6 +127,7 @@ def send_image_message(img_base64, img_md5):
         }
     }
     response = requests.post(WEBHOOK_URL, headers={'Content-Type': 'application/json'}, data=json.dumps(payload))
+    print(f"====返回结果：{response}")
     if response.status_code == 200:
         print("图片发送成功")
     else:
@@ -151,6 +152,7 @@ def check_rss_feed(feed_url):
     """检查RSS源的更新并将新文章发送到企业微信"""
     feed = feedparser.parse(feed_url)
     for entry in feed.entries:
+        print(f"检查：id -> {entry.id} 标题：{entry.title}，来源：{entry.source.title}")
         if not is_article_sent(entry.id):
             content_html = entry.content[0].value
             text_content = extract_plain_text(content_html)
@@ -178,7 +180,7 @@ def main():
     init_db()
 
     # RSS源URL
-    rss_feed_url = 'rss源'  # 替换为你需要监控的RSS源URL
+    rss_feed_url = 'rss源'  # 替换为你需要监控的RSS源URL（这里用TTRSS的rss源）
     check_rss_feed(rss_feed_url)
     # # 开始轮询检查RSS源
     # while True:
